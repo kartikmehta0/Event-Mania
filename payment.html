@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="payment.css">
+    <style>
+        .payment-container input[type="radio"] {
+            margin-right: 10px;
+            vertical-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Complete Your Payment</h1>
+    </header>
+
+    <div class="payment-container">
+        <h2>Choose Your Payment Method</h2>
+
+        <form id="payment-form" action="confirmation.html" method="POST">
+            <div>
+                <input type="radio" id="card" name="payment-method" value="card" required>
+                <label for="card">Credit/Debit Card</label><br>
+
+                <div id="card-details">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number"><br>
+
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY"><br>
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv"><br>
+                </div>
+            </div>
+
+            <div>
+                <input type="radio" id="upi" name="payment-method" value="upi">
+                <label for="upi">UPI</label><br>
+
+                <div id="upi-details">
+                    <label for="upi-id">UPI ID:</label>
+                    <input type="text" id="upi-id" name="upi-id" placeholder="e.g., yourname@upi"><br>
+                </div>
+            </div>
+
+            <div>
+                <input type="radio" id="net-banking" name="payment-method" value="net-banking">
+                <label for="net-banking">Net Banking</label><br>
+
+                <div id="net-banking-details">
+                    <label for="net-banking">Select Bank:</label>
+                    <select id="net-banking" name="net-banking">
+                        <option value="">Select Bank</option>
+                        <option value="SBI BANK">Bank 1</option>
+                        <option value="ICICI BANK">Bank 2</option>
+                        <option value="HDFC BANK">Bank 3</option>
+                    </select><br>
+                </div>
+            </div>
+
+            <div>
+                <input type="radio" id="wallet" name="payment-method" value="wallet">
+                <label for="wallet">Mobile Wallet</label><br>
+
+                <div id="wallet-details">
+                    <label for="wallet">Select Wallet:</label>
+                    <select id="wallet" name="wallet">
+                        <option value="">Select Wallet</option>
+                        <option value="paytm">Paytm</option>
+                        <option value="phonepe">PhonePe</option>
+                        <option value="gpay">Google Pay</option>
+                    </select><br>
+                </div>
+            </div>
+
+            <label for="total-amount">Total Amount:</label>
+            <input type="text" id="total-amount" name="total-amount" value="₹500" readonly><br>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Event Mania. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const paymentMethods = document.getElementsByName('payment-method');
+        const cardDetails = document.getElementById('card-details');
+        const upiDetails = document.getElementById('upi-details');
+        const netBankingDetails = document.getElementById('net-banking-details');
+        const walletDetails = document.getElementById('wallet-details');
+
+        function hideAll() {
+            cardDetails.style.display = 'none';
+            upiDetails.style.display = 'none';
+            netBankingDetails.style.display = 'none';
+            walletDetails.style.display = 'none';
+        }
+
+        hideAll(); // Hide all by default
+
+        paymentMethods.forEach(method => {
+            method.addEventListener('change', function () {
+                hideAll();
+                switch (this.value) {
+                    case 'card':
+                        cardDetails.style.display = 'block';
+                        break;
+                    case 'upi':
+                        upiDetails.style.display = 'block';
+                        break;
+                    case 'net-banking':
+                        netBankingDetails.style.display = 'block';
+                        break;
+                    case 'wallet':
+                        walletDetails.style.display = 'block';
+                        break;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
