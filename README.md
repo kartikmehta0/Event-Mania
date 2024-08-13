@@ -32,17 +32,20 @@ Integration with payment gateways for ticket sales.
 
 1.4. Stakeholders Project Sponsor: N/A
 
-Product Owner: Kartik Mehta
+Project Owner: Kartik Mehta
 
-Development Team: Chatgpt
+Development Team: Chatgpt (Used Chatgpt as Developer & using Documentations to let Gpt understand what project need)
 
 Marketing Team: N/A
 
 Event Organizers: External stakeholders using the platform to promote events.
 
-End Users: Individuals looking for and registering for events.
+End Users: Individuals looking for events and registering for events.
+
 
 Functional Requirements Document (FRD)
+
+
 2.1. Homepage Header: Displays the logo, search bar, and navigation menu.
 
 Search Functionality: Users can search for events by city, date, or keyword.
