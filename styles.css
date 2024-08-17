@@ -143,67 +143,6 @@ nav a:hover {
     color: white;
 }
 
-.events {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1000px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.events h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.event-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.event-box {
-    display: block;
-    position: relative;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    text-decoration: none;
-    color: black;
-}
-
-.event-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.event-box .star-rating {
-    position: absolute;
-    top: 10px;
-    right: 100px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 3px 5px;
-    border-radius: 3px;
-    font-size: 14px;
-}
-
-.event-box .event-title {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-}
-
 .live-events {
     max-width: 1000px;
     margin: 20px auto;
