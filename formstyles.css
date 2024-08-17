@@ -1,5 +1,6 @@
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -11,53 +12,125 @@ header {
     color: #fff;
     padding: 15px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    margin: 0;
+header .logo {
     font-size: 28px;
     font-weight: bold;
 }
 
-.form-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-form {
+nav {
     display: flex;
-    flex-direction: column;
 }
 
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-input {
-    margin-bottom: 15px;
+nav a:hover {
+    color: #f9a825;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
 }
 
-.price {
-    font-size: 18px;
-    color: #f9a825;
-    font-weight: bold;
-    margin-bottom: 20px;
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
 }
 
-button {
-    padding: 15px;
+.search-bar button:hover {
+    background-color: #f9a825;
+}
+
+.auth-buttons button {
+    padding: 10px 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #f9a825;
+}
+
+.banner .slider {
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider img {
+    width: 100%;
+    display: block;
+    transition: opacity 1s ease-in-out;
+}
+
+.event-details {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.event-details h1 {
+    font-size: 28px;
+    color: #f9a825;
+}
+
+.event-details .date-time {
+    font-size: 16px;
+    color: #555;
+}
+
+.image-gallery img {
+    width: 48%;
+    margin-right: 2%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-gallery img:nth-child(2) {
+    margin-right: 0;
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.more-info {
+    padding: 10px 20px;
     background-color: #1c1c1c;
     color: #fff;
     border: none;
@@ -67,16 +140,206 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.more-info:hover {
     background-color: #f9a825;
 }
 
-footer {
+.ticket-booking {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ticket-booking h2 {
+    font-size: 24px;
+    color: #f9a825;
+}
+
+.ticket-options select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.ticket-options button {
+    padding: 10px 20px;
     background-color: #1c1c1c;
     color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    position: relative;
-    bottom: 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.ticket-options button:hover {
+    background-color: #f9a825;
+}
+
+.registration-form {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.registration-form h2 {
+    font-size: 24px;
+    color: #f9a825;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-group div:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
     width: 100%;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 16px;
+    color: #f9a825;
+    margin-bottom: 15px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #f9a825;
+}
+
+.venue-details {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.venue-details h2 {
+    font-size: 24px;
+    color: #f9a825;
+}
+
+.map {
+    margin-top: 10px;
+}
+
+.reviews {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.reviews h2 {
+    font-size: 24px;
+    color: #f9a825;
+}
+
+.review {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f9a825;
+}
+
+.newsletter-signup {
+    margin-top: 10px;
+}
+
+.newsletter-signup input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 60%;
+}
+
+.newsletter-signup button {
+    padding: 10px 20px;
+    background-color: #f9a825;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-signup button:hover {
+    background-color: #e68900;
 }
